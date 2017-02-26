@@ -1,3 +1,8 @@
 prima modificare pu a testa revenirea la o versiune mai veche
+<<<<<<< HEAD
 commit 1
 commit 2 fuck it
+=======
+commit 2, commit2
+commit 1, modificarea
+>>>>>>> branch_2
