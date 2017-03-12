@@ -20,18 +20,6 @@ namespace Lab_2
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button19_Click(object sender, EventArgs e)
         {
             //display dot(.) when press dot button in TextBox
@@ -41,10 +29,6 @@ namespace Lab_2
         private void Text_Output_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
         }
 
         private void button_Click(object sender, EventArgs e)
@@ -101,12 +85,23 @@ namespace Lab_2
                 case "/":
                     result.Text = (value / Double.Parse(result.Text)).ToString();
                     break;
+                case "^2":
+                    result.Text = (value * value).ToString();
+                    break;
+                case "√":
+                    result.Text = (System.Math.Sqrt(value)).ToString();
+                    break;
+                case "+/-":
+                    result.Text = (-1 * value).ToString();
+                    break;
                 default:
                     break;
             }//end switch
             value = Double.Parse(result.Text);            //reset to whatever is showing
             operation = "";
         }
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -121,7 +116,7 @@ namespace Lab_2
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            switch(e.KeyChar.ToString())
+            switch (e.KeyChar.ToString())
             {
                 case "0":
                     zero.PerformClick();
@@ -157,13 +152,13 @@ namespace Lab_2
                     add.PerformClick();
                     break;
                 case "-":
-                    div.PerformClick();
+                    sub.PerformClick();
                     break;
                 case "*":
                     times.PerformClick();
                     break;
                 case "/":
-                    sub.PerformClick();
+                    div.PerformClick();
                     break;
                 case "=":
                     equal.PerformClick();

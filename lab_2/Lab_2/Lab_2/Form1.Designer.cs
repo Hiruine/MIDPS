@@ -71,8 +71,9 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(77, 53);
             this.button2.TabIndex = 2;
-            this.button2.Text = "√x";
+            this.button2.Text = "√";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.operator_click);
             // 
             // button1
             // 
@@ -92,8 +93,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(77, 53);
             this.button3.TabIndex = 4;
-            this.button3.Text = "x²\r\n";
+            this.button3.Text = "^2";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.operator_click);
             // 
             // div
             // 
@@ -247,6 +249,7 @@
             this.button17.TabIndex = 18;
             this.button17.Text = "+/-";
             this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.operator_click);
             // 
             // zero
             // 
