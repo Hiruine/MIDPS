@@ -12,8 +12,8 @@ namespace Lab_2
 {
     public partial class Form1 : Form
     {
-        Double value = 0;
-        String operation = "";
+        Double value = 0;//for operations to store the data
+        String operation = "";//to get the operation string
         bool operation_pressed = false;
         public Form1()
         {
@@ -40,8 +40,8 @@ namespace Lab_2
             Button b = (Button)sender;//convert sender object to the button b
             if(b.Text == ".")
             {
-                if(!result.Text.Contains("."))
-                    result.Text = result.Text + b.Text;
+                if(!result.Text.Contains("."))//not to write multiple dot
+                    result.Text = result.Text + b.Text;//append whatever value of the button
             }
             else
                 result.Text = result.Text + b.Text;
@@ -54,14 +54,14 @@ namespace Lab_2
             if (value != 0)//to sum multiple numbers 
             {
                 equal.PerformClick();
-                operation_pressed = true;
+                operation_pressed = true;//to not keep appending at the current value
                 operation = b.Text;
                 equation.Text = value + " " + operation;
             }
             else
             {
                 operation = b.Text;
-                value = Double.Parse(result.Text);
+                value = Double.Parse(result.Text);//because we will get a string
                 operation_pressed = true;
                 equation.Text = value + " " + operation;
             }
